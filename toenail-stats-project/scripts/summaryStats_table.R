@@ -1,0 +1,26 @@
+library(kableExtra)
+library(formattable)
+col_names= c('observation_number','treament_group','subject_id_number','time', 'response')
+toenail<-read.table("data/toenail3.txt", header=T, sep='', col.names = col_names)
+res_n=table(toenail$treament_group,toenail$time)
+res_sd=tapply(toenail$response,list(toenail$treament_group,toenail$time),sd)
+res_mean=tapply(toenail$response,list(toenail$treament_group,toenail$time),mean)
+trans_res_n = t(res_n)
+colnames(trans_res_n)=c('Number_0','Number_1')
+trans_res_mean = t(res_mean)
+colnames(trans_res_mean)=c('Mean_0','Mean_1')
+trans_res_sd = t(res_sd)
+colnames(trans_res_sd)=c('SD_0','SD_1')
+transform<-cbind(trans_res_mean,trans_res_n,trans_res_sd)
+transform_col<-transform[,c(1,5,3,2,6,4)]
+rownames(transform_col)=c('Month 0','Month 1','Month 2','Month 3','Month 6','Month 9','Month 12')
+tdf<-data.frame(transform_col)
+tdf$Mean_0<- color_tile('white','orange')(tdf$Mean_0)
+tdf$Mean_1<- color_tile('white','orange')(tdf$Mean_1)
+tdf$SD_0<- color_tile('white','lightblue')(tdf$SD_0)
+tdf$SD_1<- color_tile('white','lightblue')(tdf$SD_1)
+names(tdf)<- c('Mean','SD','Number','Mean','SD',"Number")
+kbl(tdf, escape= F) %>%
+  kable_styling(bootstrap_options = c('striped','hover','condensed')) %>%
+  column_spec(1,italic = TRUE)%>%
+  add_header_above(c(" " = 1, "Itraconazol" = 3, "Lamisil" = 3))
