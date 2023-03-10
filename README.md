@@ -26,7 +26,7 @@ $$Y_{ij} = \gamma_{00}+b_{0i}+(\gamma_{10}+b_{1i}+\gamma_{11}(\textrm{Treatment 
 - $\gamma_{11}$ being the estimated fixed effect on slope that the treatment group has
 
 Third, A model where the treatment group has an effect on both the slope and intercept
-$$Y_{ij} = \gamma_{00}+b_{0i}+\gamma_{01}(\textrm{Treatment Group)})(\gamma_{10}+b_{1i}+\gamma_{11}(\textrm{Treatment Group}))(\textrm{Time}) + \epsilon_{ij}$$
+$$Y_{ij} = \gamma_{00}+b_{0i}+\gamma_{01}(\textrm{Treatment Group)})+(\gamma_{10}+b_{1i}+\gamma_{11}(\textrm{Treatment Group}))(\textrm{Time}) + \epsilon_{ij}$$
 
 - $\gamma_{01}$ being the estimated fixed effect on intercept that the treatment group has
 
