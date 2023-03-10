@@ -16,9 +16,23 @@ $$Y_{ij} = \gamma_{00}+b_{0i}+(\gamma_{10}+b_{1i})(\textrm{Time}) + \epsilon_{ij
 
 - $\gamma_{10}$ being the estimated slope for a non specific subject
 
-$b_{1i}$ being the normally distributed per subject variation in slope from our random variable
+- $b_{1i}$ being the normally distributed per subject variation in slope from our random variable
+
+- $\epsilon_{ij}$ being unknown random error
 
 Second, A model where the treatment group has an effect on the slope
 $$Y_{ij} = \gamma_{00}+b_{0i}+(\gamma_{10}+b_{1i}+\gamma_{11}(\textrm{Treatment Group}))(\textrm{Time}) + \epsilon_{ij}$$
+
+- $\gamma_{11}$ being the estimated fixed effect on slope that the treatment group has
+
 Third, A model where the treatment group has an effect on both the slope and intercept
+$$Y_{ij} = \gamma_{00}+b_{0i}+\gamma_{01}(\textrm{Treatment Group)})(\gamma_{10}+b_{1i}+\gamma_{11}(\textrm{Treatment Group}))(\textrm{Time}) + \epsilon_{ij}$$
+
+- $\gamma_{01}$ being the estimated fixed effect on intercept that the treatment group has
+
+The variation explained by each of these models were tested using an ANOVA, with the $H_0$ for each subsquent model being that the model doesn't not explain more of the random variation that the null model.
+
 ![anova table](https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/model_anova.png)
+
+Given our $\alpha = 0.05$, we fail to reject the null hypothesis for either of our new models, meaning we don't have sufficent evidence to say that differences in the treament group lead to different intercepts or slopes in our model for toenail growth over time.
+
