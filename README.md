@@ -32,7 +32,7 @@ $$Y_{ij} = \gamma_{00}+b_{0i}+\gamma_{01}(\textrm{Treatment Group)})(\gamma_{10}
 
 The variation explained by each of these models were tested using an ANOVA, with the $H_0$ for each subsquent model being that the model doesn't not explain more of the random variation that the null model.
 
-<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/model_anova.png" width = "774" height = "158>
+<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/model_anova.png" width = "774" height = "158">
 
 Given our $\alpha = 0.05$, we fail to reject the null hypothesis for either of our new models, meaning we don't have sufficent evidence to say that differences in the treament group lead to different intercepts or slopes in our model for toenail growth over time.
 
