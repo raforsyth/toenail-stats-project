@@ -7,10 +7,15 @@ To determine if our fixed treatment effect has a significant impact on either th
 1. A model with no effect based on treatment group
 $$Y_{ij} = \gamma_{00}+b_{0i}+(\gamma_{10}+b_{1i})(\textrm{Time}) + \epsilon_{ij}$$
 with $Y_{ij}$ being our toenail growth in mm
+
 $\gamma_{00}$ being the estimated intercept for a non specific subject
+
 $b_{0i}$ being normally distributed per subject variation in intercept from our random variable
+
 $\gamma_{10}$ being the estimated slope for a non specific subject
-$\b_{1i}$ being the normally distributed per subject variation in slope from our random variable
+
+$b_{1i}$ being the normally distributed per subject variation in slope from our random variable
+
 2. A model where the treatment group has an effect on the slope
 $$Y_{ij} = \gamma_{00}+b_{0i}+(\gamma_{10}+b_{1i}+\gamma_{11}(\textrm{Treatment Group}))(\textrm{Time}) + \epsilon_{ij}$$
 3. A model where the treatment group has an effect on both the slope and intercept
