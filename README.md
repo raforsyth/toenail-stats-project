@@ -50,6 +50,7 @@ Although there's no particular difference in the progression of toenail growth b
 - $b_{1i}$ being the normally distributed per subject variation in slope from our random variable
 
 However, these two coefficents are not independent. These are assumed to be drawn from a bivariate normal distribution and thus are correlated. We know that there is a correlation of -0.39 between $b_{0i}$ and $b_{1i}$ from our LME4 generated model. We can visualize the connection below with the random variable for intercept plotted against the random variable for slope.
+
 <image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/rand_int_rand_slope.png">
 
 Therefore if we know the starting intercept value we can make a prediction for $b_{1i}$ if we know our starting intercept. If we have a new patient and a starting toenail length, we can give a prediction for the evolution of the growth of the toenail.
@@ -64,11 +65,11 @@ $$t_0 = \hat{\gamma_{00}} + \hat{b_{0i}} \implies$$
 
 $$\hat{b_{0i}} = t_0 - \hat{\gamma_{00}}$$
 
-$$\hat{b_{1i}} = \hat{\alpha} + \hat{\beta}(\hat{\beta_{0i}})$$
+$$\hat{b_{1i}} = \hat{\alpha} + \hat{\beta}(\hat{b{0i}})$$
 
 And we can plug that into our final model
 
-$$\hat{Y_{ij}} = \hat{\gamma_{00}}+\hat{b_{0i}}+(\hat{\gamma_{10}}+\hat{\alpha} + \hat{\beta}(\hat{\beta_{0i}})(\textrm{Time})$$
+$$\hat{Y_{ij}} = \hat{\gamma_{00}}+\hat{b_{0i}}+(\hat{\gamma_{10}}+\hat{\alpha} + \hat{\beta}(\hat{b_{0i}})(\textrm{Time})$$
 
 To generate the prediction for toenail progression at a given time given our starting toenail length.
 ## Random Effects Assessment
