@@ -50,13 +50,13 @@ Although there's no particular difference in the progression of toenail growth b
 - $b_{1i}$ being the normally distributed per subject variation in slope from our random variable
 
 However, these two coefficents are not independent. These are assumed to be drawn from a bivariate normal distribution and thus are correlated. We know that there is a correlation of -0.39 between $b_{0i}$ and $b_{1i}$ from our LME4 generated model. We can visualize the connection below with the random variable for intercept plotted against the random variable for slope.
-<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/rand_int_rand_slope.png" width = "774" height = "158">
+<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/rand_int_rand_slope.png">
 
 Therefore if we know the starting intercept value we can make a prediction for $b_{1i}$ if we know our starting intercept. If we have a new patient and a starting toenail length, we can give a prediction for the evolution of the growth of the toenail.
 
 To do this we generate the following simple linear regression for $b_{1i}$ given $b_{0i}$:
 
-<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/linear_reg_table.png",width = "774",height="158">
+<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/linear_reg_table.png" width = "774" height = "158">
 
 So given a new patient's starting toenail length $t_0$, we can predict $b_{1i}$ through the following sets of equations, using $\alpha$ as our estimated intercept above and our $\beta$ as our estimated slope above:
 
