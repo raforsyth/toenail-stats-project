@@ -49,7 +49,7 @@ Although there's no particular difference in the progression of toenail growth b
 
 - $b_{1i}$ being the normally distributed per subject variation in slope from our random variable
 
-However, these two coefficents are not independent. These are assumed to be drawn from a bivariate normal distribution and thus are correlated. We know that there is a correlation of -0.39 between $b_{0i}$ and $b_{1i}$ from our LME4 generated model. We can visualize the connection below with the random variable for intercept plotted against the random variable for slope.
+However, these two coefficents are not independent. These are assumed to be drawn from a bivariate normal distribution and thus are correlated. We know that there is a correlation of -0.39 between $b_{0i}$ and $b_{1i}$ from our LME1 generated model. We can visualize the connection below with the random variable for intercept plotted against the random variable for slope.
 
 <image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/rand_int_rand_slope.png">
 
@@ -73,3 +73,7 @@ $$\hat{Y_{ij}} = \hat{\gamma_{00}}+\hat{b_{0i}}+(\hat{\gamma_{10}}+\hat{\alpha} 
 
 To generate the prediction for toenail progression at a given time given our starting toenail length.
 ## Random Effects Assessment
+
+One problem with our ability to make predictions using this model is that we assumed that the random effects $b_{0i}$ and $b_{1i}$ were normally distributed to construct our model. However, if we run shapiro test on the distributions of random effects generated from our LME1 model, we can see that there is sufficent evidence to reject the notion that these effects are randomly distributed.
+
+<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/shapiro_table.png" width = "690" height = "178">
