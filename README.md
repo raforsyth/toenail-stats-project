@@ -65,11 +65,11 @@ $$t_0 = \hat{\gamma_{00}} + \hat{b_{0i}} \implies$$
 
 $$\hat{b_{0i}} = t_0 - \hat{\gamma_{00}}$$
 
-$$\hat{b_{1i}} = \hat{\alpha} + \hat{\beta}(\hat{b{0i}})$$
+$$\hat{b_{1i}} = \hat{\alpha} + \hat{\beta}(\hat{b_{0i}})$$
 
 And we can plug that into our final model
 
-$$\hat{Y_{ij}} = \hat{\gamma_{00}}+\hat{b_{0i}}+(\hat{\gamma_{10}}+\hat{\alpha} + \hat{\beta}(\hat{b_{0i}})(\textrm{Time})$$
+$$\hat{Y_{ij}} = \hat{\gamma_{00}}+\hat{b_{0i}}+(\hat{\gamma_{10}}+\hat{\alpha} + \hat{\beta}(\hat{b_{0i}}))(\textrm{Time})$$
 
 To generate the prediction for toenail progression at a given time given our starting toenail length.
 ## Random Effects Assessment
