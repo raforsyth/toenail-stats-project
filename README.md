@@ -56,7 +56,7 @@ Therefore if we know the starting intercept value we can make a prediction for $
 
 To do this we generate the following simple linear regression for $b_{1i}$ given $b_{0i}$:
 
-<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/linear_reg_table.png" width = "774" height = "158">
+<image src = "https://github.com/raforsyth/toenail-stats-project/blob/main/toenail-stats-project/images/linear_reg_table.png" width = "690" height = "167">
 
 So given a new patient's starting toenail length $t_0$, we can predict $b_{1i}$ through the following sets of equations, using $\alpha$ as our estimated intercept above and our $\beta$ as our estimated slope above:
 
